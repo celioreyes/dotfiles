@@ -1,0 +1,7 @@
+# Everything
+/*
+
+# Only nvim
+!/nvim/
+!/nvim/lua/*
+
