@@ -5,3 +5,5 @@
 !/nvim/
 !/nvim/lua/*
 
+!.gitignore
+!README.md
