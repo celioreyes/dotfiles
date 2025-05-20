@@ -1,7 +1,8 @@
 local options = {
     formatters_by_ft = {
         lua = { "stylua" },
-        go = { "golines" },
+        -- go = { "golines" },
+        go = { "goimports", "golines" },
     },
 
     format_on_save = {
