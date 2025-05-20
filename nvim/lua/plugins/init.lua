@@ -1,18 +1,18 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
-        event = { "BufReadPre", "BufNewFile" },
+        event = { "BufReadPre", "BufNewFile", "BufReadPost" },
         config = function()
             require("configs.treesitter")
-        end
+        end,
     },
 
     {
         "neovim/nvim-lspconfig",
-        event = { "BufReadPre", "BufNewFile"},
+        event = { "BufReadPre", "BufNewFile" },
         config = function()
-            require "nvchad.configs.lspconfig".defaults()
-            require "configs.lspconfig"
+            require("nvchad.configs.lspconfig").defaults()
+            require("configs.lspconfig")
         end,
     },
 
@@ -44,11 +44,11 @@ return {
 
     {
         "stevearc/conform.nvim",
-        event = 'BufWritePre', -- uncomment for format on save
-        cmd = { "ConformInfo"},
+        event = "BufWritePre", -- uncomment for format on save
+        cmd = { "ConformInfo" },
         config = function()
             require("configs.conform")
-        end
+        end,
     },
 
     {
@@ -58,6 +58,11 @@ return {
         config = function()
             require("configs.mason-conform")
         end,
+    },
+    {
+        "mrcjkb/rustaceanvim",
+        version = "^5", -- Recommended
+        lazy = false, -- This plugin is already lazy
     },
     --{
     --    "lukas-reineke/lsp-format.nvim",

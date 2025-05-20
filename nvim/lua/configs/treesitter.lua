@@ -5,8 +5,12 @@ local options = {
         "vimdoc",
         "html",
         "css",
-        "odin",
         "zig",
+        "go",
+        "gomod",
+        "gosum",
+        "gowork",
+        "rust",
     },
 
     highlight = {
